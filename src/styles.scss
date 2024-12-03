@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+/* styles.scss */
+$primary: #E08F7E;
+$text: #323e51;
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    color: $text;
+    background-color: $primary;
+    
+}
+
+* {
+    outline:  none;
+}
+
+/* Style all images globally */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Add rounded corners */
+    margin: 10px 0; /* Add spacing between images */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow effect */
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

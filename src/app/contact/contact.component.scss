@@ -1,0 +1,84 @@
+
+ $primary: #E08F7E;
+$text: #323e51;
+
+  /* Simple styling for the cat adoption form */
+.hero {
+  
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: $text;
+    text-align: center;
+  }
+  
+  .section {
+    padding: 40px 0;
+  }
+  
+  .input, .textarea, .select select {
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 8px;
+  }
+  
+  .button.is-success {
+    background-color: $text; /* Green color */
+    color: white;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .button.is-success:hover {
+    background-color: $primary;
+  }
+  
+  .label {
+    font-weight: bold;
+    color:$text;
+    margin-bottom: 5px;
+  }
+  
+  .field {
+    margin-bottom: 20px;
+  }
+  
+  .textarea {
+    min-height: 150px;
+  }
+  
+  form {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+   
+  }
+  
+  .field .control {
+    margin-bottom: 15px;
+  }
+  
+  /* Optional custom styling for the checkbox labels */
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  select {
+    border: 1px solid $primary;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+  

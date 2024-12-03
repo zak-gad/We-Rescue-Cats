@@ -1,0 +1,45 @@
+$primary: #E08F7E;
+$text: #323e51;
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 4rem;
+    padding-inline: 16;
+    padding-block: 8px;
+    background-color: $text;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+
+    .logo {
+        width: 4rem;
+        margin: auto;
+        cursor: pointer;
+            &:hover {
+                color: $primary;
+                
+            }
+    }
+
+    nav {
+        display: flex;
+        width: 100%;
+        // justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        span {
+            cursor: pointer;
+            &:hover {
+                color: $primary;
+                
+            }
+        }
+        
+       
+    }
+}
