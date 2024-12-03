@@ -1,9 +1,9 @@
 <p>adopt-cat works!</p>
-<p>cats-gallery works!</p>
-<div *ngFor="let breed of breeds">
+
+<div class="breed-card" *ngFor="let breed of breeds">
     <h3>{{ breed.name }}</h3>
     <!-- Show breed image if imageUrl exists -->
-    <img *ngIf="breed.imageUrl" [src]="breed.imageUrl" alt="{{ breed.name }}" style="max-width: 100%; height: auto;">
+    <img *ngIf="breed.imageUrl" [src]="breed.imageUrl" alt="{{ breed.name }}" class="breed-image">
     <h4>{{ breed.description }}</h4>
-    <button (click)="ContactComponent(breed.id)">Adopt at</button>
- </div>
+    <button  class="adopt-button" (click)="viewAdoptForm()">Adopt</button>
+</div>

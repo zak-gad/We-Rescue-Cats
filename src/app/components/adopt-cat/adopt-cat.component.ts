@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Component,OnInit, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AdoptFormComponent } from '../../adopt-form/adopt-form.component';
 
 interface CatBreed {
   id: string;
@@ -15,7 +16,7 @@ interface CatBreed {
 
 @Component({
   selector: 'app-adopt-cat',
-  imports: [CommonModule, FormsModule, HttpClientModule],
+  imports: [CommonModule, FormsModule, HttpClientModule, ],
   templateUrl: './adopt-cat.component.html',
   styleUrl: './adopt-cat.component.scss'
 })
@@ -54,7 +55,7 @@ export class AdoptCatComponent {
       });
   }
 
-  ContactComponent(breedId: string): void {
-    this.router.navigate(['/contact', breedId], {queryParams: {breedId}}); // Navigate to the breed detail page
+  viewAdoptForm(): void {
+    this.router.navigate(['/contact',]); // Navigate to the breed detail page
   }
 }

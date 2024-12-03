@@ -1,10 +1,11 @@
-<p>cat-detail works!</p>
+
 
 <div *ngIf="breed">
     <h2>{{ breed.name }}</h2>
     <img *ngIf="breed.imageUrl" [src]="breed.imageUrl" alt="{{ breed.name }}" style="max-width: 100%; height: auto;">
     <p>{{ breed.description }}</p>
     <p><strong>Temperament:</strong> {{ breed.temperament }}</p>
+    <p><strong>Origin:</strong> {{ breed.origin }}</p>
   </div>
   
   

@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { CatsGalleryComponent } from './components/cats-gallery/cats-gallery.component';
 import { CatDetailComponent } from './components/cat-detail/cat-detail.component';
+
  
 
 export const routes: Routes = [
@@ -23,9 +24,14 @@ export const routes: Routes = [
     }
 },
 {
-    path: 'contact',
-    loadComponent: () => import('./contact/contact.component').then(m => m.ContactComponent)
+    path: 'adopt-form',
+    loadComponent: () => { 
+        return import('./adopt-form/adopt-form.component').then(
+            (m) => m.AdoptFormComponent
+        )
+
+    }
   },
-{ path: '', component: CatsGalleryComponent },
+
 { path: 'breed-detail/:id', component: CatDetailComponent}
 ];
