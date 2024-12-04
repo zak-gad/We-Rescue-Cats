@@ -11,10 +11,18 @@ interface CatBreed {
   temperament: string;
   description: string;
   adaptability: string;
+  life_span: number;
   origin: string;
   child_friendly: string;
   dog_friendly: number;
   energy_level: number;
+  grooming: number;
+  health_issues: number;
+  intelligence: number;
+  shedding_level: number;
+  social_needs: number;
+  stranger_friendly: number;
+  vocalisation: number;
 }
 
 @Component({
