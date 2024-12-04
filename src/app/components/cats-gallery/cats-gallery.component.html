@@ -1,9 +1,9 @@
-<p>cats-gallery works!</p>
+
 <div class="grid-container">
     <div *ngFor="let breed of breeds">
         <div class="post">
          <div>
-            <h3> Name: {{ breed.name }}</h3>
+            <h3>  {{ breed.name }}</h3>
             <!-- Show breed image if imageUrl exists -->
             <img *ngIf="breed.imageUrl" [src]="breed.imageUrl" alt="{{ breed.name }}" >
          </div>

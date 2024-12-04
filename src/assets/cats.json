@@ -1,0 +1,27 @@
+[
+    {
+      "id": "1",
+      "name": "Whiskers",
+      "breed": "Persian",
+      "location": { "lat": 40.712776, "lng": -74.005974 },
+      "imageUrl": "assets/images/whiskers.jpg",
+      "description": "Friendly and fluffy."
+    },
+    {
+      "id": "2",
+      "name": "Mittens",
+      "breed": "Maine Coon",
+      "location": { "lat": 34.052235, "lng": -118.243683 },
+      "imageUrl": "assets/images/mittens.jpg",
+      "description": "Loves to play and cuddle."
+    },
+    {
+      "id": "3",
+      "name": "Shadow",
+      "breed": "Siamese",
+      "location": { "lat": 51.507351, "lng": -0.127758 },
+      "imageUrl": "assets/images/shadow.jpg",
+      "description": "Very vocal and affectionate."
+    }
+  ]
+  
