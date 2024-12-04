@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-adopt-form',
@@ -6,6 +7,12 @@ import { Component } from '@angular/core';
   templateUrl: './adopt-form.component.html',
   styleUrl: './adopt-form.component.scss'
 })
-export class AdoptFormComponent {
-
+export class AdoptFormComponent implements OnInit {
+  breedId: string | null = null;
+  constructor(private route: ActivatedRoute) {}
+  ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      this.breedId = params['breedId'];
+    });
+  }
 }

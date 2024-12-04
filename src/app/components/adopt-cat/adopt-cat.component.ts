@@ -56,6 +56,6 @@ export class AdoptCatComponent {
   }
 
   viewAdoptForm(): void {
-    this.router.navigate(['/contact',]); // Navigate to the breed detail page
+    this.router.navigate(['adopt-form',]); // Navigate to the breed detail page
   }
 }

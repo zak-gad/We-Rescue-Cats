@@ -1,19 +1,35 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-contact',
-  imports: [],
+  standalone: true,
+  imports: [ReactiveFormsModule,CommonModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
-  breedId: string | null = null;
-  constructor(private route: ActivatedRoute) {}
-  ngOnInit() {
-    this.route.queryParams.subscribe(params => {
-      this.breedId = params['breedId'];
+export class ContactComponent {
+  contactForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.contactForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', Validators.required]
     });
   }
 
+  onSubmit(): void {
+    if (this.contactForm.valid) {
+      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this.contactForm.value, 'YOUR_USER_ID')
+        .then((result: EmailJSResponseStatus) => {
+          console.log(result.text);
+          alert('Message sent successfully!');
+        }, (error: { text: string }) => {
+          console.log(error.text);
+          alert('Failed to send message.');
+        });
+    }
+  }
 }

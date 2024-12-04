@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { CatsGalleryComponent } from './components/cats-gallery/cats-gallery.component';
 import { CatDetailComponent } from './components/cat-detail/cat-detail.component';
+import { ContactComponent } from './contact/contact.component';
 
  
 
@@ -33,5 +34,6 @@ export const routes: Routes = [
     }
   },
 
-{ path: 'breed-detail/:id', component: CatDetailComponent}
+{ path: 'breed-detail/:id', component: CatDetailComponent},
+{ path: 'contact', component: ContactComponent }
 ];
