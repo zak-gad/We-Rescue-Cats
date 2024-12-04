@@ -1,11 +1,22 @@
-
-
-<div *ngIf="breed">
+<div *ngIf="breed" class="card">
+  <div class="card-header">
     <h2>{{ breed.name }}</h2>
-    <img *ngIf="breed.imageUrl" [src]="breed.imageUrl" alt="{{ breed.name }}" style="max-width: 100%; height: auto;">
-    <p>{{ breed.description }}</p>
-    <p><strong>Temperament:</strong> {{ breed.temperament }}</p>
-    <p><strong>Origin:</strong> {{ breed.origin }}</p>
   </div>
-  
-  
+  <div class="card-body">
+    <img
+      *ngIf="breed.imageUrl"
+      [src]="breed.imageUrl"
+      alt="{{ breed.name }}"
+      class="card-img"
+    />
+    <ul class="card-details">
+      <li><strong>Temperament:</strong> {{ breed.temperament }}</li>
+      <li><strong>Origin:</strong> {{ breed.origin }}</li>
+      <li><strong>Adaptability:</strong> {{ breed.adaptability }}</li>
+      <li><strong>Child Friendly:</strong> {{ breed.child_friendly }}</li>
+      <li><strong>Dog Friendly:</strong> {{ breed.dog_friendly }}</li>
+      <li><strong>Energy Level:</strong> {{ breed.energy_level }}</li>
+    </ul>
+  </div>
+</div>
+

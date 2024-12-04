@@ -1,49 +1,43 @@
-$primary: #E08F7E;
-$text: #323e51;
-
-.breeds-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 16px;
-    padding: 16px;
-  }
-  
-  .breed-card {
+.card {
     border: 1px solid #ddd;
     border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  .card-header {
+    background-color: #f8f8f8;
     padding: 16px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
+    border-bottom: 1px solid #ddd;
   }
   
-  .breed-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  .card-body {
+    padding: 16px;
   }
   
-  .breed-image {
+  .card-img {
+    display: block;
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
-    margin: 8px 0;
+    margin: 0 auto 16px;
   }
   
-  .adopt-button {
-    background-color: $text;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+  .card-details {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
   }
   
-  .adopt-button:hover {
-    background-color: #218838;
+  .card-details li {
+    margin-bottom: 8px;
+  }
+  
+  .card-details strong {
+    display: inline-block;
+    width: 120px;
   }
   

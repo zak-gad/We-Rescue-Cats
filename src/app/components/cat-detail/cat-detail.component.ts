@@ -10,7 +10,11 @@ interface CatBreed {
   imageUrl?: string;
   temperament: string;
   description: string;
+  adaptability: string;
   origin: string;
+  child_friendly: string;
+  dog_friendly: number;
+  energy_level: number;
 }
 
 @Component({
